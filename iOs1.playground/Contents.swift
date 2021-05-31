@@ -33,3 +33,13 @@ print ("Площадь треугольника равна \(square)")
 print("Периметр треугольника равен \(perimeter)")
 print("гипотенуза треугольника равна \(hypotenuse)")
 
+//3.    *Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через                             5 лет.
+var deposit:Float = 1000
+var percent:Float = 0.03
+
+var result1 = deposit + (deposit * percent)
+var result2 = result1 + (result1 * percent)
+var result3 = result2 + (result2 * percent)
+var result4 = result3 + (result3 * percent)
+var result5 = result4 + (result4 * percent)
+print("Сумма вклада через 5 лет - \(result5)")
