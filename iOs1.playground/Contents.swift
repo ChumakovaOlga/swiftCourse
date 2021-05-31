@@ -1,37 +1,50 @@
 import UIKit
 
 var greeting = "Hello, playground"
-//1.    Решить квадратное уравнение.
 
-let a: Float =  1
-let b: Float = 2
-let c: Float = 3
 
-var x1: Float
-var x2: Float
-var d: Float
-var discriminant: Float
-d = b * b - (4 * a * c)
-if(d >= 0){
-    discriminant = sqrt(d)
-    x1 = (-b + discriminant) / (2 * a)
-    x2 = (-b - (discriminant)) / (2 * a)
-    print(x1, x2)
-}else if(d < 0){
-    d = ((4 * a * c) - pow(b,2)) / (2 * a)
-    print(d)
+//1  Написать функцию, которая определяет, четное число или нет.
+func evenOdd() {
+let numbers = [15, 30, 14, 21, 43, 59]
+for i in numbers {
+    if i % 2 == 0 {
+        print("\(i) - is an even number")
+    } else {
+        print("\(i) - is an odd number")
+    }
+  }
 }
-//2.    Даны катеты прямоугольного треугольника. Найти площадь, периметр и гипотенузу треугольника.
-var leg1:Float = 2
-var leg2:Float = 4
+evenOdd()
 
-var square: Float = (leg1 * leg2) / 2
-var hypotenuse: Float = sqrt(leg1 * leg1 + leg2 * leg2)
-var perimeter:Float = leg1 + leg2 + hypotenuse
+//2. Написать функцию, которая определяет, делится ли число без остатка на 3.
 
-print ("Площадь треугольника равна \(square)")
-print("Периметр треугольника равен \(perimeter)")
-print("гипотенуза треугольника равна \(hypotenuse)")
+func divideToThree() {
+    let numbers = [18, 30, 14, 21, 43, 5]
+for element in numbers{
+    if element % 3 == 0 {
+        print("\(element) is devided by 3 without remainder")
+    } else {
+        print("\(element) is devided by 3 with remainder")
+    }
+  }
+}
+divideToThree()
+
+//3. Создать возрастающий массив из 100 чисел.
+var array = [Int]()
+var i = 1
+
+while i <= 100 {
+    array.append(i)
+    i += 1
+}
+print(array)
+
+//4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
+for element in array where (element % 2 == 0) || (element % 3 == 0) {
+    array.remove(at : (array.firstIndex(of: element)!))
+}
+print(array)
 
 //3.    *Пользователь вводит сумму вклада в банк и годовой процент. Найти сумму вклада через                             5 лет.
 var deposit:Float = 1000
